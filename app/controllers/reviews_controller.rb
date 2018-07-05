@@ -5,6 +5,7 @@ class ReviewsController < RankingController
   end
 
   def create
+    redirect_to controller: :products, action: :index
     # Review.create(create_params)
     # トップページにリダイレクトする
   end
