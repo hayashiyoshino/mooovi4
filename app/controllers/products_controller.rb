@@ -7,6 +7,7 @@ class ProductsController < RankingController
   def show
     # productsテーブルから該当するidの作品情報を取得し@productの変数へ代入する処理を書いて下さい
     @product = Product.find(params[:id])
+    @reviews = Review.where(product_id: params[:id])
   end
 
   def search
