@@ -35,7 +35,7 @@
                       <p class="text-small">
                         <% if product.reviews.present? %>
                         <span class="rating-star">
-                          <i class="star-actived rate-<%= product.reviews.average(:rate).round %>0"></i>
+                          <i class="star-actived rate-<%= product.review_average %>0"></i>
                         </span>
                         <% else %>
                         <span class="rating-star">
