@@ -1,5 +1,6 @@
 TechReviewSite::Application.routes.draw do
 
+  devise_for :users
   resources :products, only: :show do
     resources :reviews, only: [:new, :create]
     # get 'products/:products_id/reviews/new' => 'reviews#new'
