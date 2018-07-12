@@ -4,7 +4,7 @@ class ProductsController < RankingController
 
   def index
     # productsテーブルから最新順に作品を２０件取得する
-    @products = Product.all.order('id ASC').where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    @products = Product.all.order('id ASC').where('title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(20)
   end
 
   def show
